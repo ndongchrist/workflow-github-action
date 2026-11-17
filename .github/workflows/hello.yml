@@ -14,11 +14,12 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Say hello
-        run: echo "Hello from GitHub Actions! Commit: $GITHUB_SHA"
+        run: |
+        echo "Hello from GitHub Actions! Commit: $GITHUB_SHA"
         
       - name: Look around
         run: |
         echo "Runner OS: $RUNNER_OS"
-        pwd
-        ls -la
-        uname -a
+      # pwd
+      # ls -la
+      # uname -a
