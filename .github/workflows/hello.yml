@@ -32,7 +32,7 @@ jobs:
         run: |
           echo "Hello from GitHub Actions! Commit: $GITHUB_SHA"
           echo "${{env.VARIABLE}}"
-          echo "${{vars.TEST_SECRET}}"
+          echo "${{secrets.TEST_SECRET}}"
         
       - name: Look around
         run: |
