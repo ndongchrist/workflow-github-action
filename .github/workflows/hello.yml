@@ -18,6 +18,8 @@ on:
       dry_run:
         type: boolean
         default: true
+env:
+  VARIABLE: "TEST"
 
 jobs:
   hello:
@@ -29,6 +31,8 @@ jobs:
       - name: Say hello
         run: |
           echo "Hello from GitHub Actions! Commit: $GITHUB_SHA"
+          echo "${{env.VARIABLE}}"
+          echo "${{vars.TEST_SECRET}}"
         
       - name: Look around
         run: |
